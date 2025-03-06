@@ -1,0 +1,29 @@
+.blocks {
+    display: inline-block; /* Чтобы блоки выстраивались в ряд */
+    margin: 10px; /* Отступы между блоками */
+    position: relative; /* Для позиционирования большой картинки */
+  }
+  
+  .resize_thumb {
+    width: 150px;
+    height: 100px;
+    display: block;
+  }
+  
+  .large_image {
+    position: absolute;
+    top: 0;
+    left: 160px; /* Сдвигаем большую картинку вправо от миниатюры */
+    display: none; /* Скрываем большую картинку по умолчанию */
+    z-index: 10; /* Чтобы большая картинка была поверх других элементов */
+  }
+  
+  .large_image img {
+    width: 300px; /* Размер большой картинки */
+    height: auto; /* Сохраняем пропорции */
+    border: 2px solid #ccc; /* Рамка вокруг большой картинки */
+  }
+  
+  .blocks a:hover .large_image {
+    display: block; /* Показываем большую картинку при наведении */
+  }
